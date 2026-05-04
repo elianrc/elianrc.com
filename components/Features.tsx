@@ -26,7 +26,7 @@ export default function Features() {
           return (
             <div key={feature.title} className="text-center space-y-4">
               <div className="flex justify-center">
-                <Icon className="text-green-400 w-12 h-12" />
+                <Icon className="text-brand w-12 h-12" />
               </div>
               <h3 className="text-xl font-bold italic">{feature.title}</h3>
               <p className="text-white leading-relaxed">{feature.body}</p>

@@ -12,7 +12,7 @@ export default function ValueProp() {
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
       <div className="max-w-4xl mx-auto text-center space-y-6">
-        <p className="text-green-400 text-sm font-semibold uppercase tracking-widest">
+        <p className="text-brand text-sm font-semibold uppercase tracking-widest">
           {tr.badge}
         </p>
         <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
@@ -32,7 +32,7 @@ export default function ValueProp() {
 
         <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 bg-zinc-900/95 rounded-xl px-5 py-4 max-w-[200px]">
           <p>
-            <span className="text-green-400 font-bold italic">{di.headlineGreen}</span>
+            <span className="text-brand font-bold italic">{di.headlineGreen}</span>
             <br />
             <span className="text-white">{di.headlineWhite}</span>
           </p>

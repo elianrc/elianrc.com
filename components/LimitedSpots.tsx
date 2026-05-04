@@ -31,7 +31,7 @@ export default function LimitedSpots() {
   }
 
   const inputClass =
-    'w-full bg-zinc-800 border border-zinc-700 rounded px-4 py-3 text-white focus:outline-none focus:border-green-400 transition-colors'
+    'w-full bg-zinc-800 border border-zinc-700 rounded px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors'
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
@@ -42,7 +42,7 @@ export default function LimitedSpots() {
         </div>
 
         {status === 'success' ? (
-          <p className="text-center text-green-400 font-semibold">{tr.success}</p>
+          <p className="text-center text-brand font-semibold">{tr.success}</p>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
@@ -81,7 +81,7 @@ export default function LimitedSpots() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="bg-green-500 hover:bg-green-400 disabled:opacity-60 text-white font-semibold px-8 py-3 rounded transition-colors"
+              className="bg-brand hover:bg-brand-hover disabled:opacity-60 text-white font-semibold px-8 py-3 rounded transition-colors"
             >
               {status === 'loading' ? '...' : tr.submit}
             </button>

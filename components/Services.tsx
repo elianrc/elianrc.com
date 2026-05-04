@@ -30,13 +30,13 @@ export default function Services() {
           <div className="grid grid-cols-2 gap-3">
             {col1.map((item) => (
               <div key={item} className="flex items-center gap-2 text-white">
-                <CircleCheckBig className="text-green-400 w-5 h-5 shrink-0" />
+                <CircleCheckBig className="text-brand w-5 h-5 shrink-0" />
                 {item}
               </div>
             ))}
             {col2.map((item) => (
               <div key={item} className="flex items-center gap-2 text-white">
-                <CircleCheckBig className="text-green-400 w-5 h-5 shrink-0" />
+                <CircleCheckBig className="text-brand w-5 h-5 shrink-0" />
                 {item}
               </div>
             ))}
@@ -49,7 +49,7 @@ export default function Services() {
             href={whatsappUrl(lang)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             <WhatsAppIcon className="w-5 h-5" />
             {tr.cta}

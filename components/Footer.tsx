@@ -59,10 +59,10 @@ export default function Footer() {
         <div className="space-y-2">
           <h4 className="font-bold text-sm">{tr.quickLinks}</h4>
           <ul className="space-y-1">
-            <li><a href="#" className="text-zinc-600 hover:text-green-600 text-sm transition-colors">Inicio</a></li>
-            <li><a href="#services" className="text-zinc-600 hover:text-green-600 text-sm transition-colors">{t[lang].nav.services}</a></li>
-            <li><a href="#portfolio" className="text-zinc-600 hover:text-green-600 text-sm transition-colors">Portfolio</a></li>
-            <li><a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-green-600 text-sm transition-colors">Whatsapp</a></li>
+            <li><a href="#" className="text-zinc-600 hover:text-brand text-sm transition-colors">Inicio</a></li>
+            <li><a href="#services" className="text-zinc-600 hover:text-brand text-sm transition-colors">{t[lang].nav.services}</a></li>
+            <li><a href="#portfolio" className="text-zinc-600 hover:text-brand text-sm transition-colors">Portfolio</a></li>
+            <li><a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-brand text-sm transition-colors">Whatsapp</a></li>
           </ul>
         </div>
 
@@ -70,15 +70,15 @@ export default function Footer() {
           <h4 className="font-bold text-sm">{tr.connect}</h4>
           <div className="flex gap-3">
             <a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer"
-              className="text-zinc-800 hover:text-green-600 transition-colors">
+              className="text-zinc-800 hover:text-brand transition-colors">
               <WhatsAppIcon className="w-5 h-5" />
             </a>
 <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer"
-              className="text-zinc-800 hover:text-green-600 transition-colors">
+              className="text-zinc-800 hover:text-brand transition-colors">
               <LinkedInIcon className="w-5 h-5" />
             </a>
             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer"
-              className="text-zinc-800 hover:text-green-600 transition-colors">
+              className="text-zinc-800 hover:text-brand transition-colors">
               <GitHubIcon className="w-5 h-5" />
             </a>
           </div>

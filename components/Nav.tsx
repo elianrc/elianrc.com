@@ -14,18 +14,18 @@ export default function Nav() {
       </a>
 
       <div className="flex items-center gap-8">
-        <a href="#" className="text-white hover:text-green-400 transition-colors">
+        <a href="#" className="text-white hover:text-brand transition-colors">
           Inicio
         </a>
-        <a href="#services" className="text-white hover:text-green-400 transition-colors">
+        <a href="#services" className="text-white hover:text-brand transition-colors">
           {tr.services}
         </a>
-        <a href="#portfolio" className="text-white hover:text-green-400 transition-colors">
+        <a href="#portfolio" className="text-white hover:text-brand transition-colors">
           Portfolio
         </a>
         <button
           onClick={toggle}
-          className="text-sm font-semibold text-white hover:text-green-400 transition-colors border border-zinc-700 hover:border-green-400 rounded px-2 py-1"
+          className="text-sm font-semibold text-white hover:text-brand transition-colors border border-zinc-700 hover:border-brand rounded px-2 py-1"
         >
           {tr.langToggle}
         </button>

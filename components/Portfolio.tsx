@@ -23,7 +23,7 @@ export default function Portfolio() {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group border border-zinc-800 rounded-xl overflow-hidden hover:border-green-400 transition-colors"
+                className="group border border-zinc-800 rounded-xl overflow-hidden hover:border-brand transition-colors"
               >
                 {project.image && (
                   <img
@@ -34,7 +34,7 @@ export default function Portfolio() {
                 )}
                 <div className="p-4 space-y-2">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-semibold group-hover:text-green-400 transition-colors">
+                    <h3 className="font-semibold group-hover:text-brand transition-colors">
                       {project.title}
                     </h3>
                     <ExternalLink className="w-4 h-4 text-zinc-500" />

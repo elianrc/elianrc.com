@@ -47,9 +47,9 @@ export default function About() {
           <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
           <p className="text-white leading-relaxed">
             {tr.bodyPrefix}{' '}
-            <a href="https://www.elnuevodia.com/tecnologia/otros/notas/joven-boricua-se-abre-paso-en-silicon-valley/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">{tr.bodyLink}</a>
+            <a href="https://www.elnuevodia.com/tecnologia/otros/notas/joven-boricua-se-abre-paso-en-silicon-valley/" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">{tr.bodyLink}</a>
             {tr.bodySuffix}{' '}
-            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">
+            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">
               {tr.linkedinLabel}
             </a>.
           </p>
@@ -70,7 +70,7 @@ export default function About() {
               <GitHubIcon className="w-5 h-5 text-white" />
             </a>
             <a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer"
-              className="w-11 h-11 rounded-lg bg-green-500 flex items-center justify-center hover:bg-green-400 transition-colors">
+              className="w-11 h-11 rounded-lg bg-brand flex items-center justify-center hover:bg-brand-hover transition-colors">
               <WhatsAppIcon className="w-5 h-5 text-white" />
             </a>
           </div>
