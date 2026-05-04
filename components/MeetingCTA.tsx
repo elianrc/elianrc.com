@@ -25,17 +25,11 @@ export default function MeetingCTA() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex justify-center">
             <img
               src="/images/google-meet.png"
               alt="Google Meet"
-              className="w-32 h-32 object-contain"
-            />
-            <span className="text-4xl">→</span>
-            <img
-              src="/images/dark-back-logo.png"
-              alt="Elián RC"
-              className="h-16 w-auto"
+              className="w-full max-w-md object-contain"
             />
           </div>
 
