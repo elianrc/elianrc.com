@@ -16,7 +16,6 @@ export default function Hero() {
             {tr.headline}
           </h1>
           <p className="text-zinc-400 text-lg">{tr.subtext}</p>
-          <p className="text-green-400 font-medium">{tr.help}</p>
           <a
             href={whatsappUrl(lang)}
             target="_blank"

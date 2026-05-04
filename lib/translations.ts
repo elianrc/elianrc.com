@@ -6,11 +6,10 @@ export const t = {
       langToggle: 'EN',
     },
     hero: {
-      headline: 'Websites que Impulsan Ventas',
+      headline: 'Websites que impulsan ventas',
       subtext:
-        'Cuando sus clientes visitan su website, deberían pensar "Wow, esta empresa sabe lo que hace".',
-      help: 'Yo puedo ayudarte a lograr eso.',
-      cta: 'Háblame por WhatsApp',
+        "Cuando sus clientes visiten su website, deberían pensar: 'Wow, esta empresa sabe lo que hace.' Yo puedo ayudarle a lograr eso.",
+      cta: 'Hablemos por WhatsApp',
     },
     valueProp: {
       badge: 'Moderno. Funcional. Diseñado con propósito',
@@ -26,7 +25,11 @@ export const t = {
       items: ['Dominio', 'Alojamiento', 'Diseño', 'Seguridad', 'Mantenimiento', 'Emails'],
       extra:
         'Además, puede complementar su proyecto con servicios como creación de contenido, SEO, optimización de imágenes y videos, y mucho más.',
-      cta: 'Háblame por WhatsApp',
+      cta: 'Hablemos por WhatsApp',
+    },
+    digitalIdentity: {
+      headline: 'Identidad digital con propósito',
+      items: ['Landing Pages', 'Lead Generation', 'E-commerces', 'Portfolios', 'y más...'],
     },
     features: [
       {
@@ -57,7 +60,7 @@ export const t = {
     },
     about: {
       headline: 'Sobre Mí',
-      body: 'Desde pequeño me interesó profundamente la tecnología. Estudié Ciencias de Computadores en el Silicon Valley, donde fortalecí mi enfoque en resolver problemas reales a través del diseño y la programación. Puede conocer mi experiencia laboral en mi LinkedIn.',
+      body: 'Desde pequeño me interesó profundamente la tecnología. Estudié Ciencias de Computadores en 42 Silicon Valley, donde fortalecí mi enfoque en resolver problemas reales a través del diseño y la programación. Puede conocer mi experiencia laboral en mi LinkedIn.',
       connect: '¡Conectemos!',
     },
     limitedSpots: {
@@ -89,9 +92,8 @@ export const t = {
     hero: {
       headline: 'Websites That Drive Sales',
       subtext:
-        "When your clients visit your website, they should think \"Wow, this company knows what they're doing.\"",
-      help: 'I can help you get there.',
-      cta: 'Message me on WhatsApp',
+        "When your clients visit your website, they should think: 'Wow, this company knows what they're doing.' I can help you get there.",
+      cta: "Let's talk on WhatsApp",
     },
     valueProp: {
       badge: 'Modern. Functional. Designed with purpose',
@@ -106,7 +108,11 @@ export const t = {
       items: ['Domain', 'Hosting', 'Design', 'Security', 'Maintenance', 'Email'],
       extra:
         'You can also add services like content creation, SEO, image and video optimization, and more.',
-      cta: 'Message me on WhatsApp',
+      cta: "Let's talk on WhatsApp",
+    },
+    digitalIdentity: {
+      headline: 'Digital identity with purpose',
+      items: ['Landing Pages', 'Lead Generation', 'E-commerces', 'Portfolios', 'and more...'],
     },
     features: [
       {
@@ -137,7 +143,7 @@ export const t = {
     },
     about: {
       headline: 'About Me',
-      body: "I've had a deep interest in technology since I was young. I studied Computer Science in Silicon Valley, where I sharpened my focus on solving real problems through design and programming. Check out my work experience on LinkedIn.",
+      body: "I've had a deep interest in technology since I was young. I studied Computer Science at 42 Silicon Valley, where I sharpened my focus on solving real problems through design and programming. Check out my work experience on LinkedIn.",
       connect: "Let's connect!",
     },
     limitedSpots: {

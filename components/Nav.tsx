@@ -14,6 +14,9 @@ export default function Nav() {
       </a>
 
       <div className="flex items-center gap-6">
+        <a href="#" className="text-sm text-zinc-300 hover:text-green-400 transition-colors">
+          Inicio
+        </a>
         <a href="#services" className="text-sm text-zinc-300 hover:text-green-400 transition-colors">
           {tr.services}
         </a>
