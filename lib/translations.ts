@@ -51,12 +51,13 @@ export const t = {
     ],
     meetingCTA: {
       headline: 'Agenda una cita gratuita de 20 minutos',
+      intro: 'Reserve una reunión virtual personalizada donde:',
       bullets: [
-        'Le mostraré ejemplos de mis proyectos.',
-        'Le brindaré una propuesta ajustada a su negocio.',
-        'Todo en una conversación breve y sin compromisos.',
+        'le mostraré ejemplos de mis proyectos.',
+        'le brindaré una propuesta ajustada a su negocio.',
       ],
-      cta: 'Agendar por WhatsApp',
+      closing: 'Todo en una conversación breve y sin compromiso.',
+      cta: 'Agendar por Whatsapp',
     },
     portfolio: {
       headline: 'Portfolio',
@@ -138,11 +139,12 @@ export const t = {
     ],
     meetingCTA: {
       headline: 'Schedule a free 20-minute call',
+      intro: 'Book a personalized virtual meeting where:',
       bullets: [
         "I'll show you examples of my projects.",
         "I'll provide a proposal tailored to your business.",
-        'All in a brief, no-commitment conversation.',
       ],
+      closing: 'All in a brief, no-commitment conversation.',
       cta: 'Schedule via WhatsApp',
     },
     portfolio: {
