@@ -40,8 +40,7 @@ export default function Footer() {
           <ul className="space-y-2">
             <li><a href="#" className="text-zinc-300 hover:text-green-400 text-sm transition-colors">Inicio</a></li>
             <li><a href="#services" className="text-zinc-300 hover:text-green-400 text-sm transition-colors">{t[lang].nav.services}</a></li>
-            <li><a href="#portfolio" className="text-zinc-300 hover:text-green-400 text-sm transition-colors">{t[lang].nav.portfolio}</a></li>
-            <li><a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-green-400 text-sm transition-colors">WhatsApp</a></li>
+<li><a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-green-400 text-sm transition-colors">WhatsApp</a></li>
           </ul>
         </div>
 

@@ -3,7 +3,6 @@ import Hero from '@/components/Hero'
 import ValueProp from '@/components/ValueProp'
 import Services from '@/components/Services'
 import Features from '@/components/Features'
-import Portfolio from '@/components/Portfolio'
 import MeetingCTA from '@/components/MeetingCTA'
 import About from '@/components/About'
 import LimitedSpots from '@/components/LimitedSpots'
@@ -17,7 +16,6 @@ export default function Home() {
       <ValueProp />
       <Services />
       <Features />
-      <Portfolio />
       <MeetingCTA />
       <About />
       <LimitedSpots />

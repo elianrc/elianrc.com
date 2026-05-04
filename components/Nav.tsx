@@ -17,9 +17,6 @@ export default function Nav() {
         <a href="#services" className="text-sm text-zinc-300 hover:text-green-400 transition-colors">
           {tr.services}
         </a>
-        <a href="#portfolio" className="text-sm text-zinc-300 hover:text-green-400 transition-colors">
-          {tr.portfolio}
-        </a>
         <button
           onClick={toggle}
           className="text-sm font-semibold text-zinc-300 hover:text-green-400 transition-colors border border-zinc-700 hover:border-green-400 rounded px-2 py-1"
