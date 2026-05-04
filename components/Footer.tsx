@@ -45,7 +45,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[auto_1fr_auto_auto] gap-8 items-start">
         <div className="flex-shrink-0">
           <img
-            src="/images/profile.png"
+            src="/images/footer.png"
             alt="Elián RC"
             className="w-28 h-auto object-contain"
           />
