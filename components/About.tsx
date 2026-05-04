@@ -47,7 +47,7 @@ export default function About() {
           <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
           <p className="text-zinc-400 leading-relaxed">
             {tr.bodyPrefix}{' '}
-            <span className="text-green-400">{tr.bodyLink}</span>
+            <a href="https://www.elnuevodia.com/tecnologia/otros/notas/joven-boricua-se-abre-paso-en-silicon-valley/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">{tr.bodyLink}</a>
             {tr.bodySuffix}{' '}
             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">
               {tr.linkedinLabel}
