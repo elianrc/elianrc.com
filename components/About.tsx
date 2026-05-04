@@ -45,7 +45,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
-          <p className="text-zinc-400 leading-relaxed">
+          <p className="text-white leading-relaxed">
             {tr.bodyPrefix}{' '}
             <a href="https://www.elnuevodia.com/tecnologia/otros/notas/joven-boricua-se-abre-paso-en-silicon-valley/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">{tr.bodyLink}</a>
             {tr.bodySuffix}{' '}
@@ -53,10 +53,10 @@ export default function About() {
               {tr.linkedinLabel}
             </a>.
           </p>
-          <p className="text-zinc-400 leading-relaxed">
+          <p className="text-white leading-relaxed">
             {tr.bodyExtra}
           </p>
-          <p className="text-zinc-400 leading-relaxed">
+          <p className="text-white leading-relaxed">
             {tr.bodyPersonal}
           </p>
           <p className="font-bold italic underline">{tr.connect}</p>

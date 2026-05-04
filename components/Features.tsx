@@ -29,7 +29,7 @@ export default function Features() {
                 <Icon className="text-green-400 w-12 h-12" />
               </div>
               <h3 className="text-xl font-bold italic">{feature.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{feature.body}</p>
+              <p className="text-white leading-relaxed">{feature.body}</p>
             </div>
           )
         })}

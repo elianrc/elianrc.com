@@ -26,7 +26,7 @@ export default function Services() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold italic">{tr.headline}</h2>
-          <p className="text-zinc-400">{tr.subtext}</p>
+          <p className="text-white">{tr.subtext}</p>
           <div className="grid grid-cols-2 gap-3">
             {col1.map((item) => (
               <div key={item} className="flex items-center gap-2 text-white">
@@ -41,7 +41,7 @@ export default function Services() {
               </div>
             ))}
           </div>
-          <p className="text-zinc-400">
+          <p className="text-white">
             {tr.extraPrefix}{' '}
             <span className="font-bold text-white">{tr.extraBold}</span>
           </p>

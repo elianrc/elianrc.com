@@ -34,12 +34,12 @@ export default function MeetingCTA() {
           </div>
 
           <div className="space-y-6">
-            <p className="text-zinc-300">{tr.intro}</p>
+            <p className="text-white">{tr.intro}</p>
             <ul className="space-y-3">
               {tr.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-3">
                   <CircleCheckBig className="text-green-400 w-5 h-5 mt-0.5 shrink-0" />
-                  <span className="text-zinc-300">{bullet}</span>
+                  <span className="text-white">{bullet}</span>
                 </li>
               ))}
             </ul>

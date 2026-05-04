@@ -23,7 +23,7 @@ export default function Hero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase">
             {tr.headline}
           </h1>
-          <p className="text-zinc-400 text-lg whitespace-pre-line">{tr.subtext}</p>
+          <p className="text-white text-lg whitespace-pre-line">{tr.subtext}</p>
           <p className="font-bold underline">{tr.help}</p>
           <a
             href={whatsappUrl(lang)}

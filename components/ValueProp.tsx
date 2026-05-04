@@ -16,9 +16,9 @@ export default function ValueProp() {
           {tr.badge}
         </p>
         <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
-        <p className="text-zinc-400 leading-relaxed">{tr.body}</p>
+        <p className="text-white leading-relaxed">{tr.body}</p>
         <div className="pt-4">
-          <p className="text-zinc-300">{tr.tagline}</p>
+          <p className="text-white">{tr.tagline}</p>
           <p className="font-bold">{tr.taglineBold}</p>
         </div>
       </div>

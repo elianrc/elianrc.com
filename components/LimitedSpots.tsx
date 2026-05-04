@@ -38,7 +38,7 @@ export default function LimitedSpots() {
       <div className="max-w-2xl mx-auto bg-zinc-900 rounded-xl p-10 md:p-16 space-y-8">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{tr.headline}</h2>
-          <p className="text-zinc-400">{tr.subtext}</p>
+          <p className="text-white">{tr.subtext}</p>
         </div>
 
         {status === 'success' ? (
