@@ -61,11 +61,7 @@ export default function About() {
           </p>
           <p className="font-bold italic underline">{tr.connect}</p>
           <div className="flex gap-3">
-            <a href="https://twitter.com/elianrc" target="_blank" rel="noopener noreferrer"
-              className="w-11 h-11 rounded-lg bg-sky-500 flex items-center justify-center hover:bg-sky-400 transition-colors">
-              <TwitterIcon className="w-5 h-5 text-white" />
-            </a>
-            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer"
+<a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer"
               className="w-11 h-11 rounded-lg bg-blue-700 flex items-center justify-center hover:bg-blue-600 transition-colors">
               <LinkedInIcon className="w-5 h-5 text-white" />
             </a>
