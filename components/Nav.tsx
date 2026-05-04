@@ -9,11 +9,8 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-zinc-950/90 backdrop-blur-sm border-b border-zinc-800">
-      <a href="#" className="flex items-center gap-2">
-        <span className="text-green-400 font-bold text-xl">⊟ ELIAN RC</span>
-        <span className="hidden sm:block text-zinc-400 text-xs uppercase tracking-widest">
-          Web Designer + Developer
-        </span>
+      <a href="#">
+        <img src="/images/dark-back-logo.png" alt="Elián RC" className="h-10 w-auto" />
       </a>
 
       <div className="flex items-center gap-6">

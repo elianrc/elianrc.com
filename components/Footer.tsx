@@ -29,9 +29,7 @@ export default function Footer() {
     <footer className="bg-zinc-950 border-t border-zinc-800 py-12 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="space-y-3">
-          <div className="flex items-center gap-2">
-            <span className="text-green-400 font-bold">⊟ ELIAN RC</span>
-          </div>
+          <img src="/images/dark-back-logo.png" alt="Elián RC" className="h-8 w-auto" />
           <p className="text-zinc-400 text-sm leading-relaxed">{tr.aboutText}</p>
         </div>
 

@@ -16,7 +16,7 @@ export default function MeetingCTA() {
           <img
             src="/images/google-meet.png"
             alt="Google Meet"
-            className="w-40 h-40 object-contain"
+            className="w-64 h-64 object-contain"
           />
         </div>
         <div className="space-y-6">
