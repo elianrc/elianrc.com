@@ -38,7 +38,7 @@ export const t = {
     features: [
       {
         title: 'Pagos Flexibles',
-        body: 'Planes de pago ajustados a su presupuesto. Mi meta es que pueda invertir en su website sin afectar su crecimiento.',
+        body: 'Planes de pago adaptados a su presupuesto. Mi meta es ayudarle a invertir en su website sin afectar su crecimiento.',
       },
       {
         title: 'Diseño Personalizado',
