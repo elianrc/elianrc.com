@@ -16,8 +16,8 @@ export const t = {
       badge: 'Moderno. Funcional. Diseñado con propósito',
       headline: 'Websites que generan confianza y resultados',
       body: 'Cada empresa merece una presencia online que hable por sí misma. Yo diseño websites que no solo se ven bien, sino que conectan con su público y ayudan a convertir visitantes en clientes.',
-      tagline:
-        'Desde la idea hasta la publicación, mi meta es una sola: que su negocio crezca con un website claro, rápido y profesional.',
+      tagline: 'Desde la idea hasta la publicación, mi meta es una sola:',
+      taglineBold: 'que su negocio crezca con un website claro, rápido y profesional.',
     },
     services: {
       headline: 'Soluciones y Resultados',
@@ -29,8 +29,11 @@ export const t = {
       cta: 'Hablemos por WhatsApp',
     },
     digitalIdentity: {
-      headline: 'Identidad digital con propósito',
-      items: ['Landing Pages', 'Lead Generation', 'E-commerces', 'Portfolios', 'y más...'],
+      headlineGreen: 'Identidad',
+      headlineWhite: 'digital con propósito.',
+      specializedTitle: 'Especializado:',
+      items: ['Landing Pages', 'Lead Generation', 'E-commerces', 'Portfolios'],
+      more: 'y más...',
     },
     features: [
       {
@@ -101,8 +104,8 @@ export const t = {
       badge: 'Modern. Functional. Designed with purpose',
       headline: 'Websites that build trust and deliver results',
       body: "Every business deserves an online presence that speaks for itself. I design websites that don't just look good — they connect with your audience and turn visitors into clients.",
-      tagline:
-        'From idea to launch, my goal is simple: grow your business with a clear, fast, and professional website.',
+      tagline: 'From idea to launch, my goal is simple:',
+      taglineBold: 'grow your business with a clear, fast, and professional website.',
     },
     services: {
       headline: 'Solutions & Results',
@@ -113,8 +116,11 @@ export const t = {
       cta: "Let's talk on WhatsApp",
     },
     digitalIdentity: {
-      headline: 'Digital identity with purpose',
-      items: ['Landing Pages', 'Lead Generation', 'E-commerces', 'Portfolios', 'and more...'],
+      headlineGreen: 'Digital',
+      headlineWhite: 'identity with purpose.',
+      specializedTitle: 'Specialized:',
+      items: ['Landing Pages', 'Lead Generation', 'E-commerces', 'Portfolios'],
+      more: 'and more...',
     },
     features: [
       {
