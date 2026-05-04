@@ -23,8 +23,8 @@ export default function ValueProp() {
           </div>
           <div className="flex justify-center">
             <img
-              src="/images/valueprop.png"
-              alt="Brand mockup"
+              src="/images/dark-back-logo.png"
+              alt="Elián RC"
               className="max-w-full h-auto rounded-xl"
             />
           </div>

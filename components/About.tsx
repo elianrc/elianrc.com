@@ -44,7 +44,7 @@ export default function About() {
         </div>
         <div className="flex justify-center">
           <img
-            src="/images/elian.png"
+            src="/images/profile.png"
             alt="Elián RC"
             className="w-64 h-64 object-cover rounded-full border-4 border-green-400"
           />

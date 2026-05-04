@@ -13,9 +13,11 @@ export default function MeetingCTA() {
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-900">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="flex justify-center">
-          <div className="w-32 h-32 rounded-full bg-zinc-800 flex items-center justify-center text-5xl">
-            📅
-          </div>
+          <img
+            src="/images/google-meet.png"
+            alt="Google Meet"
+            className="w-40 h-40 object-contain"
+          />
         </div>
         <div className="space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold">{tr.headline}</h2>

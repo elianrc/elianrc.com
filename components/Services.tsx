@@ -45,7 +45,7 @@ export default function Services() {
         </div>
         <div className="flex justify-center">
           <img
-            src="/images/services.png"
+            src="/images/services.jpg"
             alt="Services"
             className="max-w-full h-auto rounded-xl"
           />
