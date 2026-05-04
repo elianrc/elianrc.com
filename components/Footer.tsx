@@ -43,13 +43,12 @@ export default function Footer() {
   return (
     <footer className="bg-white text-zinc-800 py-12 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[auto_1fr_auto_auto] gap-8 items-start">
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex-shrink-0">
           <img
             src="/images/profile.png"
             alt="Elián RC"
-            className="w-24 h-24 rounded-full object-cover"
+            className="w-28 h-auto object-contain"
           />
-          <img src="/images/dark-back-logo.png" alt="Elián RC" className="h-8 w-auto" />
         </div>
 
         <div className="space-y-2">
