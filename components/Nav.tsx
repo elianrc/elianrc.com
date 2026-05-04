@@ -8,17 +8,20 @@ export default function Nav() {
   const tr = t[lang].nav
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-zinc-950/90 backdrop-blur-sm border-b border-zinc-800">
+    <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 py-8 bg-zinc-950">
       <a href="#">
-        <img src="/images/dark-back-logo.png" alt="Elián RC" className="h-10 w-auto" />
+        <img src="/images/dark-back-logo.png" alt="Elián RC" className="h-16 md:h-20 w-auto" />
       </a>
 
-      <div className="flex items-center gap-6">
-        <a href="#" className="text-sm text-zinc-300 hover:text-green-400 transition-colors">
+      <div className="flex items-center gap-8">
+        <a href="#" className="text-zinc-300 hover:text-green-400 transition-colors">
           Inicio
         </a>
-        <a href="#services" className="text-sm text-zinc-300 hover:text-green-400 transition-colors">
+        <a href="#services" className="text-zinc-300 hover:text-green-400 transition-colors">
           {tr.services}
+        </a>
+        <a href="#portfolio" className="text-zinc-300 hover:text-green-400 transition-colors">
+          Portfolio
         </a>
         <button
           onClick={toggle}

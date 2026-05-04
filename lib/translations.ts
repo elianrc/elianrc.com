@@ -8,7 +8,8 @@ export const t = {
     hero: {
       headline: 'Websites que impulsan ventas',
       subtext:
-        "Cuando sus clientes visiten su website, deberían pensar: 'Wow, esta empresa sabe lo que hace.' Yo puedo ayudarle a lograr eso.",
+        'Cuando sus clientes visiten su website, deberían pensar:\n“Wow, esta empresa sabe lo que hace.”',
+      help: 'Yo puedo ayudarle a lograr eso.',
       cta: 'Hablemos por WhatsApp',
     },
     valueProp: {
@@ -92,7 +93,8 @@ export const t = {
     hero: {
       headline: 'Websites That Drive Sales',
       subtext:
-        "When your clients visit your website, they should think: 'Wow, this company knows what they're doing.' I can help you get there.",
+        'When your clients visit your website, they should think:\n"Wow, this company knows what they\'re doing."',
+      help: 'I can help you get there.',
       cta: "Let's talk on WhatsApp",
     },
     valueProp: {
