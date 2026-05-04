@@ -81,7 +81,7 @@ export default function LimitedSpots() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="bg-green-500 hover:bg-green-400 disabled:opacity-60 text-black font-semibold px-8 py-3 rounded transition-colors"
+              className="bg-green-500 hover:bg-green-400 disabled:opacity-60 text-white font-semibold px-8 py-3 rounded transition-colors"
             >
               {status === 'loading' ? '...' : tr.submit}
             </button>

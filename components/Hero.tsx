@@ -29,7 +29,7 @@ export default function Hero() {
             href={whatsappUrl(lang)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             <WhatsAppIcon className="w-5 h-5" />
             {tr.cta}
