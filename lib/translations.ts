@@ -24,8 +24,8 @@ export const t = {
       subtext:
         'Me encargo de todo lo que su website necesita para destacar y funcionar sin preocupaciones.',
       items: ['Dominio', 'Alojamiento', 'Diseño', 'Seguridad', 'Mantenimiento', 'Emails'],
-      extra:
-        'Además, puede complementar su proyecto con servicios como creación de contenido, SEO, optimización de imágenes y videos, y mucho más.',
+      extraPrefix: 'Además, puede complementar su proyecto con servicios como',
+      extraBold: 'creación de contenido, SEO, optimización de imágenes y videos, y mucho más.',
       cta: 'Hablemos por WhatsApp',
     },
     digitalIdentity: {
@@ -111,8 +111,8 @@ export const t = {
       headline: 'Solutions & Results',
       subtext: 'I handle everything your website needs to stand out and run without worry.',
       items: ['Domain', 'Hosting', 'Design', 'Security', 'Maintenance', 'Email'],
-      extra:
-        'You can also add services like content creation, SEO, image and video optimization, and more.',
+      extraPrefix: 'You can also add services like',
+      extraBold: 'content creation, SEO, image and video optimization, and more.',
       cta: "Let's talk on WhatsApp",
     },
     digitalIdentity: {
