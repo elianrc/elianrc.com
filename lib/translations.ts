@@ -65,7 +65,12 @@ export const t = {
     },
     about: {
       headline: 'Sobre Mí',
-      body: 'Desde pequeño me interesó profundamente la tecnología. Estudié Ciencias de Computadores en 42 Silicon Valley, donde fortalecí mi enfoque en resolver problemas reales a través del diseño y la programación. Puede conocer mi experiencia laboral en mi LinkedIn.',
+      bodyPrefix: 'Desde pequeño he tenido un interés profundo en la tecnología. Estudié',
+      bodyLink: 'Ciencias de Computadora en 42 Silicon Valley',
+      bodySuffix: ', donde fortalecí mi enfoque en resolver problemas reales a través del diseño y la programación. Puede conocer mi experiencia laboral en mi',
+      linkedinLabel: 'LinkedIn',
+      bodyExtra: 'Hoy en día, vivo ayudando a negocios a crecer mediante el uso de la misma, específicamente websites.',
+      bodyPersonal: 'Soy un cristiano, esposo y "life-long learner".',
       connect: '¡Conectemos!',
     },
     limitedSpots: {
@@ -153,7 +158,12 @@ export const t = {
     },
     about: {
       headline: 'About Me',
-      body: "I've had a deep interest in technology since I was young. I studied Computer Science at 42 Silicon Valley, where I sharpened my focus on solving real problems through design and programming. Check out my work experience on LinkedIn.",
+      bodyPrefix: "I've had a deep interest in technology since I was young. I studied",
+      bodyLink: 'Computer Science at 42 Silicon Valley',
+      bodySuffix: ', where I sharpened my focus on solving real problems through design and programming. Check out my work experience on my',
+      linkedinLabel: 'LinkedIn',
+      bodyExtra: 'Today I help businesses grow through technology, specifically websites.',
+      bodyPersonal: 'I am a Christian, a husband, and a "life-long learner".',
       connect: "Let's connect!",
     },
     limitedSpots: {
