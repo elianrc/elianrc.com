@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 import { SOCIAL_LINKS, whatsappUrl } from '@/lib/constants'
 
@@ -42,7 +43,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <Container className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
           <p className="text-white leading-relaxed">
@@ -82,7 +83,7 @@ export default function About() {
             className="w-80 h-80 object-cover rounded-full border-8 border-white"
           />
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
