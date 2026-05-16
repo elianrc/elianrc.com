@@ -2,6 +2,7 @@
 
 import { ExternalLink } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 import { projects } from '@/lib/projects'
 
@@ -11,7 +12,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <div className="max-w-6xl mx-auto">
+      <Container>
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">{tr.headline}</h2>
         {projects.length === 0 ? (
           <p className="text-center text-zinc-500">{tr.empty}</p>
@@ -55,7 +56,7 @@ export default function Portfolio() {
             ))}
           </div>
         )}
-      </div>
+      </Container>
     </section>
   )
 }

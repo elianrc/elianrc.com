@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
@@ -35,59 +36,61 @@ export default function LimitedSpots() {
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <div className="max-w-2xl mx-auto bg-zinc-900 rounded-xl p-10 md:p-16 space-y-8">
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{tr.headline}</h2>
-          <p className="text-white">{tr.subtext}</p>
-        </div>
+      <Container>
+        <div className="max-w-2xl mx-auto bg-zinc-900 rounded-xl p-10 md:p-16 space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{tr.headline}</h2>
+            <p className="text-white">{tr.subtext}</p>
+          </div>
 
-        {status === 'success' ? (
-          <p className="text-center text-brand font-semibold">{tr.success}</p>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label className="block text-sm font-medium mb-2">{tr.namePlaceholder}</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                className={inputClass}
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">{tr.phonePlaceholder}</label>
-              <input
-                type="text"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-                className={inputClass}
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">{tr.emailPlaceholder}</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className={inputClass}
-              />
-            </div>
-            {status === 'error' && (
-              <p className="text-red-400 text-sm">{tr.error}</p>
-            )}
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="bg-brand hover:bg-brand-hover disabled:opacity-60 text-white font-semibold px-8 py-3 rounded transition-colors"
-            >
-              {status === 'loading' ? '...' : tr.submit}
-            </button>
-          </form>
-        )}
-      </div>
+          {status === 'success' ? (
+            <p className="text-center text-brand font-semibold">{tr.success}</p>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label className="block text-sm font-medium mb-2">{tr.namePlaceholder}</label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className={inputClass}
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">{tr.phonePlaceholder}</label>
+                <input
+                  type="text"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                  className={inputClass}
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">{tr.emailPlaceholder}</label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className={inputClass}
+                />
+              </div>
+              {status === 'error' && (
+                <p className="text-red-400 text-sm">{tr.error}</p>
+              )}
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="bg-brand hover:bg-brand-hover disabled:opacity-60 text-white font-semibold px-8 py-3 rounded transition-colors"
+              >
+                {status === 'loading' ? '...' : tr.submit}
+              </button>
+            </form>
+          )}
+        </div>
+      </Container>
     </section>
   )
 }

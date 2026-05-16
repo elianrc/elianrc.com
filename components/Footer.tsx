@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 import { SOCIAL_LINKS, whatsappUrl } from '@/lib/constants'
 
@@ -42,7 +43,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white text-zinc-800 py-12 px-6 md:px-12 lg:px-24">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[auto_1fr_auto_auto] gap-8 items-start">
+      <Container className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto_auto] gap-8 items-start">
         <div className="flex-shrink-0">
           <img
             src="/images/footer.png"
@@ -83,16 +84,16 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div>
+      </Container>
 
-      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-zinc-200 text-center">
+      <Container className="mt-8 pt-6 border-t border-zinc-200 text-center">
         <p className="text-zinc-500 text-sm">
           {tr.copyright.replace('.', '')} -{' '}
           <a href="#" className="underline hover:text-zinc-800 transition-colors">
             {tr.terms}
           </a>
         </p>
-      </div>
+      </Container>
     </footer>
   )
 }
