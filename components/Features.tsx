@@ -2,6 +2,7 @@
 
 import { Banknote, Paintbrush } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -20,7 +21,7 @@ export default function Features() {
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <Container className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {features.map((feature, i) => {
           const Icon = icons[i]
           return (
@@ -33,7 +34,7 @@ export default function Features() {
             </div>
           )
         })}
-      </div>
+      </Container>
     </section>
   )
 }

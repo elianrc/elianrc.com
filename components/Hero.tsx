@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 import { whatsappUrl } from '@/lib/constants'
 
@@ -18,7 +19,7 @@ export default function Hero() {
 
   return (
     <section className="pt-12 pb-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <Container className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase">
             {tr.headline}
@@ -42,7 +43,7 @@ export default function Hero() {
             className="max-w-full h-auto rounded-xl shadow-2xl"
           />
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

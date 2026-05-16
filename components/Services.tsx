@@ -2,6 +2,7 @@
 
 import { CircleCheckBig } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 import { whatsappUrl } from '@/lib/constants'
 
@@ -23,7 +24,7 @@ export default function Services() {
 
   return (
     <section id="services" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
+      <Container className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold italic">{tr.headline}</h2>
           <p className="text-white">{tr.subtext}</p>
@@ -62,7 +63,7 @@ export default function Services() {
             className="max-w-sm h-auto rounded-xl"
           />
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

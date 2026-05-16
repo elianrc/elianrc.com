@@ -2,6 +2,7 @@
 
 import { CircleCheckBig } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 import { whatsappUrl } from '@/lib/constants'
 
@@ -19,7 +20,7 @@ export default function MeetingCTA() {
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <div className="max-w-6xl mx-auto">
+      <Container>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold italic text-center mb-16">
           {tr.headline}
         </h2>
@@ -55,7 +56,7 @@ export default function MeetingCTA() {
             </a>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
