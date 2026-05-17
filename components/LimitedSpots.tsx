@@ -32,23 +32,23 @@ export default function LimitedSpots() {
   }
 
   const inputClass =
-    'w-full bg-zinc-800 border border-zinc-700 rounded px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors'
+    'w-full bg-zinc-950/60 border border-zinc-300/80 rounded px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors'
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
+    <section className="contact-overlap-section relative pt-20 pb-0 px-6 md:px-12 lg:px-24 bg-zinc-950">
       <Container>
-        <div className="max-w-2xl mx-auto bg-zinc-900 rounded-xl p-10 md:p-16 space-y-8">
+        <div className="relative z-20 -mb-20 md:-mb-28 max-w-4xl mx-auto bg-[#0b0f1d] rounded-xl p-7 md:p-12 lg:p-16 space-y-7 shadow-2xl shadow-black/35">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{tr.headline}</h2>
-            <p className="text-white">{tr.subtext}</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-none">{tr.headline}</h2>
+            <p className="max-w-2xl mx-auto text-white text-base leading-relaxed">{tr.subtext}</p>
           </div>
 
           {status === 'success' ? (
             <p className="text-center text-brand font-semibold">{tr.success}</p>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-5">
               <div>
-                <label className="block text-sm font-medium mb-2">{tr.namePlaceholder}</label>
+                <label className="block text-base font-medium mb-2">{tr.namePlaceholder}</label>
                 <input
                   type="text"
                   value={name}
@@ -58,7 +58,7 @@ export default function LimitedSpots() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">{tr.phonePlaceholder}</label>
+                <label className="block text-base font-medium mb-2">{tr.phonePlaceholder}</label>
                 <input
                   type="text"
                   value={phone}
@@ -68,7 +68,7 @@ export default function LimitedSpots() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">{tr.emailPlaceholder}</label>
+                <label className="block text-base font-medium mb-2">{tr.emailPlaceholder}</label>
                 <input
                   type="email"
                   value={email}

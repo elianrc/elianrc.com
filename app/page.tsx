@@ -7,10 +7,12 @@ import MeetingCTA from '@/components/MeetingCTA'
 import About from '@/components/About'
 import LimitedSpots from '@/components/LimitedSpots'
 import Footer from '@/components/Footer'
+import BubbleBackground from '@/components/BubbleBackground'
 
 export default function Home() {
   return (
-    <main>
+    <main className="site-bubble-background">
+      <BubbleBackground aria-hidden="true" />
       <Nav />
       <Hero />
       <ValueProp />

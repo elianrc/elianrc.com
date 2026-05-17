@@ -42,7 +42,7 @@ export default function Footer() {
   const tr = t[lang].footer
 
   return (
-    <footer className="bg-white text-zinc-800 py-12 px-6 md:px-12 lg:px-24">
+    <footer className="site-footer relative bg-white text-zinc-800 pt-32 md:pt-44 pb-12 px-6 md:px-12 lg:px-24">
       <Container className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto_auto] gap-8 items-start">
         <div className="flex-shrink-0">
           <img
