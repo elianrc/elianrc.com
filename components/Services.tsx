@@ -23,12 +23,12 @@ export default function Services() {
   const col2 = tr.items.slice(half)
 
   return (
-    <section id="services" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <Container className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
-        <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold italic">{tr.headline}</h2>
-          <p className="text-white">{tr.subtext}</p>
-          <div className="grid grid-cols-2 gap-3">
+    <section id="services" className="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+      <Container className="grid min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto] lg:gap-12">
+        <div className="min-w-0 max-w-2xl space-y-6">
+          <h2 className="text-2xl font-bold italic sm:text-3xl md:text-4xl">{tr.headline}</h2>
+          <p className="leading-relaxed text-white">{tr.subtext}</p>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {col1.map((item) => (
               <div key={item} className="flex items-center gap-2 text-white">
                 <CircleCheckBig className="text-brand w-5 h-5 shrink-0" />
@@ -50,17 +50,17 @@ export default function Services() {
             href={whatsappUrl(lang)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-hover sm:w-auto"
           >
             <WhatsAppIcon className="w-5 h-5" />
             {tr.cta}
           </a>
         </div>
-        <div className="flex justify-center">
+        <div className="flex min-w-0 justify-center">
           <img
             src="/images/services.jpg"
             alt="Services"
-            className="max-w-sm h-auto rounded-xl"
+            className="h-auto min-w-0 w-full max-w-xs rounded-lg sm:max-w-sm"
           />
         </div>
       </Container>

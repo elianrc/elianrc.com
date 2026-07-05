@@ -11,28 +11,28 @@ export default function ValueProp() {
   const di = t[lang].digitalIdentity
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
+    <section className="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
       <Container>
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+        <div className="mx-auto max-w-4xl space-y-5 text-center sm:space-y-6">
           <p className="text-brand text-sm font-semibold uppercase tracking-widest">
             {tr.badge}
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
-          <p className="text-white leading-relaxed">{tr.body}</p>
+          <h2 className="text-2xl font-bold italic sm:text-3xl md:text-5xl">{tr.headline}</h2>
+          <p className="leading-relaxed text-white">{tr.body}</p>
           <div className="pt-4">
             <p className="text-white">{tr.tagline}</p>
             <p className="font-bold">{tr.taglineBold}</p>
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-16 relative">
+        <div className="relative mx-auto mt-10 max-w-4xl sm:mt-16">
           <img
             src="/images/project-ohd-2.jpg"
             alt="Website showcase"
-            className="w-full h-auto rounded-xl"
+            className="h-auto w-full rounded-lg"
           />
 
-          <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 bg-zinc-900/95 rounded-xl px-5 py-4 max-w-[200px]">
+          <div className="mt-4 max-w-full rounded-lg bg-zinc-900/95 px-5 py-4 sm:max-w-xs md:absolute md:bottom-8 md:left-8 md:mt-0 md:max-w-[200px]">
             <p>
               <span className="text-brand font-bold italic">{di.headlineGreen}</span>
               <br />
@@ -40,8 +40,8 @@ export default function ValueProp() {
             </p>
           </div>
 
-          <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-4 md:right-0 md:translate-x-8 bg-white rounded-xl px-6 py-5 shadow-xl">
-            <p className="font-bold italic text-zinc-900 mb-3">{di.specializedTitle}</p>
+          <div className="mt-4 max-w-full rounded-lg bg-white px-5 py-5 shadow-xl sm:max-w-xs md:absolute md:top-1/2 md:right-0 md:mt-0 md:-translate-y-1/2 md:translate-x-8 md:px-6">
+            <p className="mb-3 font-bold italic text-zinc-900">{di.specializedTitle}</p>
             <ul className="space-y-2">
               {di.items.map((item) => (
                 <li key={item} className="flex items-center gap-2 text-zinc-800 text-sm">

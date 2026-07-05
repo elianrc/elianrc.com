@@ -18,29 +18,29 @@ export default function Hero() {
   const tr = t[lang].hero
 
   return (
-    <section className="pt-12 pb-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <Container className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase">
+    <section className="px-4 pt-8 pb-16 sm:px-6 sm:pt-12 sm:pb-20 md:px-8 lg:px-12 lg:pb-24 bg-zinc-950">
+      <Container className="grid min-w-0 grid-cols-1 items-center gap-8 md:grid-cols-2 lg:gap-12">
+        <div className="min-w-0 max-w-2xl space-y-5 sm:space-y-6">
+          <h1 className="break-words text-3xl font-bold leading-tight uppercase sm:text-4xl md:text-5xl lg:text-6xl">
             {tr.headline}
           </h1>
-          <p className="text-white text-lg whitespace-pre-line">{tr.subtext}</p>
+          <p className="text-base leading-relaxed text-white whitespace-pre-line sm:text-lg">{tr.subtext}</p>
           <p className="font-bold underline">{tr.help}</p>
           <a
             href={whatsappUrl(lang)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-hover sm:w-auto"
           >
             <WhatsAppIcon className="w-5 h-5" />
             {tr.cta}
           </a>
         </div>
-        <div className="flex justify-center">
+        <div className="flex min-w-0 justify-center">
           <img
             src="/images/project-ohd.jpg"
             alt="Project showcase"
-            className="max-w-full h-auto rounded-xl shadow-2xl"
+            className="h-auto min-w-0 w-full max-w-lg rounded-lg shadow-2xl"
           />
         </div>
       </Container>

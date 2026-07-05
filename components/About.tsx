@@ -5,14 +5,6 @@ import Container from '@/components/Container'
 import { t } from '@/lib/translations'
 import { SOCIAL_LINKS, whatsappUrl } from '@/lib/constants'
 
-function TwitterIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-    </svg>
-  )
-}
-
 function LinkedInIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -42,10 +34,10 @@ export default function About() {
   const tr = t[lang].about
 
   return (
-    <section id="about" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <Container className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <h2 className="text-3xl md:text-5xl font-bold italic">{tr.headline}</h2>
+    <section id="about" className="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+      <Container className="grid min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-12">
+        <div className="min-w-0 space-y-5 sm:space-y-6">
+          <h2 className="text-2xl font-bold italic sm:text-3xl md:text-5xl">{tr.headline}</h2>
           <p className="text-white leading-relaxed">
             {tr.bodyPrefix}{' '}
             <a href="https://www.elnuevodia.com/tecnologia/otros/notas/joven-boricua-se-abre-paso-en-silicon-valley/" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">{tr.bodyLink}</a>
@@ -76,11 +68,11 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex min-w-0 justify-center">
           <img
             src="/images/profile.png"
             alt="Elián RC"
-            className="w-80 h-80 object-cover rounded-full border-8 border-white"
+            className="h-56 w-56 rounded-full border-4 border-white object-cover sm:h-72 sm:w-72 sm:border-8 md:h-80 md:w-80"
           />
         </div>
       </Container>

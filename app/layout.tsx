@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import localFont from 'next/font/local'
 import { LanguageProvider } from '@/context/LanguageContext'
 import './globals.css'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const montserrat = localFont({
+  src: '../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2',
+  display: 'swap',
+  style: 'normal',
+  weight: '100 900',
+})
 
 export const metadata: Metadata = {
   title: 'Elián RC — Web Designer & Developer',

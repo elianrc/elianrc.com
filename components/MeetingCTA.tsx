@@ -19,23 +19,23 @@ export default function MeetingCTA() {
   const tr = t[lang].meetingCTA
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
+    <section className="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
       <Container>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold italic text-center mb-16">
+        <h2 className="mb-10 text-center text-2xl font-bold italic sm:text-3xl md:mb-16 md:text-4xl lg:text-5xl">
           {tr.headline}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
+        <div className="grid min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-12">
+          <div className="flex min-w-0 justify-center">
             <img
               src="/images/google-meet.png"
               alt="Google Meet"
-              className="w-full max-w-md object-contain"
+              className="min-w-0 w-full max-w-md object-contain"
             />
           </div>
 
-          <div className="space-y-6">
-            <p className="text-white">{tr.intro}</p>
+          <div className="min-w-0 space-y-6">
+            <p className="leading-relaxed text-white">{tr.intro}</p>
             <ul className="space-y-3">
               {tr.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-3">
@@ -49,7 +49,7 @@ export default function MeetingCTA() {
               href={whatsappUrl(lang)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-hover sm:w-auto"
             >
               <WhatsAppIcon className="w-5 h-5" />
               {tr.cta}

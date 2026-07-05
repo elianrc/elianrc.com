@@ -20,12 +20,12 @@ export default function Features() {
   const features = t[lang].features
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
-      <Container className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <section className="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+      <Container className="grid grid-cols-1 gap-10 md:grid-cols-3 lg:gap-12">
         {features.map((feature, i) => {
           const Icon = icons[i]
           return (
-            <div key={feature.title} className="text-center space-y-4">
+            <div key={feature.title} className="mx-auto max-w-sm space-y-4 text-center">
               <div className="flex justify-center">
                 <Icon className="text-brand w-12 h-12" />
               </div>

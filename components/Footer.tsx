@@ -13,14 +13,6 @@ function WhatsAppIcon({ className }: { className?: string }) {
   )
 }
 
-function TwitterIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-    </svg>
-  )
-}
-
 function LinkedInIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -42,8 +34,8 @@ export default function Footer() {
   const tr = t[lang].footer
 
   return (
-    <footer className="site-footer relative bg-white text-zinc-800 pt-32 md:pt-44 pb-12 px-6 md:px-12 lg:px-24">
-      <Container className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto_auto] gap-8 items-start">
+    <footer className="site-footer relative bg-white px-4 pt-28 pb-10 text-zinc-800 sm:px-6 md:px-8 md:pt-44 lg:px-12 lg:pb-12">
+      <Container className="grid grid-cols-1 items-start justify-items-center gap-8 text-center sm:grid-cols-2 sm:justify-items-start sm:text-left lg:grid-cols-[auto_1fr_auto_auto]">
         <div className="flex-shrink-0">
           <img
             src="/images/footer.png"
@@ -86,7 +78,7 @@ export default function Footer() {
         </div>
       </Container>
 
-      <Container className="mt-8 pt-6 border-t border-zinc-200 text-center">
+      <Container className="mt-8 border-t border-zinc-200 pt-6 text-center">
         <p className="text-zinc-500 text-sm">
           {tr.copyright.replace('.', '')} -{' '}
           <a href="#" className="underline hover:text-zinc-800 transition-colors">

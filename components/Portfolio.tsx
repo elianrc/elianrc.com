@@ -11,9 +11,9 @@ export default function Portfolio() {
   const tr = t[lang].portfolio
 
   return (
-    <section id="portfolio" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-950">
+    <section id="portfolio" className="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
       <Container>
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">{tr.headline}</h2>
+        <h2 className="mb-10 text-center text-2xl font-bold sm:text-3xl md:mb-12 md:text-4xl">{tr.headline}</h2>
         {projects.length === 0 ? (
           <p className="text-center text-zinc-500">{tr.empty}</p>
         ) : (
@@ -34,11 +34,11 @@ export default function Portfolio() {
                   />
                 )}
                 <div className="p-4 space-y-2">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-start justify-between gap-3">
                     <h3 className="font-semibold group-hover:text-brand transition-colors">
                       {project.title}
                     </h3>
-                    <ExternalLink className="w-4 h-4 text-zinc-500" />
+                    <ExternalLink className="h-4 w-4 shrink-0 text-zinc-500" />
                   </div>
                   <p className="text-zinc-400 text-sm">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
