@@ -1,0 +1,39 @@
+---
+import Container from '@/components/Container.astro'
+import { whatsappUrl } from '@/data/constants'
+import { t } from '@/data/translations'
+import { circleCheckIcon, whatsappIcon } from '@/components/icons'
+
+type Props = { lang: 'es' | 'en' }
+const { lang } = Astro.props as Props
+const tr = t[lang].meetingCTA
+---
+
+<section class="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+  <Container>
+    <h2 class="mb-10 text-center text-2xl font-bold italic sm:text-3xl md:mb-16 md:text-4xl lg:text-5xl">{tr.headline}</h2>
+
+    <div class="grid min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-12">
+      <div class="flex min-w-0 justify-center">
+        <img src="/images/google-meet.png" alt="Google Meet" class="min-w-0 w-full max-w-md object-contain" />
+      </div>
+
+      <div class="min-w-0 space-y-6">
+        <p class="leading-relaxed text-white">{tr.intro}</p>
+        <ul class="space-y-3">
+          {tr.bullets.map((bullet) => (
+            <li class="flex items-start gap-3">
+              <span class="contents" set:html={circleCheckIcon('text-brand w-5 h-5 mt-0.5 shrink-0')}></span>
+              <span class="text-white">{bullet}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-brand font-bold italic underline">{tr.closing}</p>
+        <a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" class="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-hover sm:w-auto">
+          <span class="contents" set:html={whatsappIcon('w-5 h-5')}></span>
+          {tr.cta}
+        </a>
+      </div>
+    </div>
+  </Container>
+</section>

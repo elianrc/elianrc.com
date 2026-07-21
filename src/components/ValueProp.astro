@@ -1,0 +1,49 @@
+---
+import Container from '@/components/Container.astro'
+import { t } from '@/data/translations'
+import { checkIcon } from '@/components/icons'
+
+type Props = { lang: 'es' | 'en' }
+const { lang } = Astro.props as Props
+const tr = t[lang].valueProp
+const di = t[lang].digitalIdentity
+---
+
+<section class="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+  <Container>
+    <div class="mx-auto max-w-4xl space-y-5 text-center sm:space-y-6">
+      <p class="text-brand text-sm font-semibold uppercase tracking-widest">{tr.badge}</p>
+      <h2 class="text-2xl font-bold italic sm:text-3xl md:text-5xl">{tr.headline}</h2>
+      <p class="leading-relaxed text-white">{tr.body}</p>
+      <div class="pt-4">
+        <p class="text-white">{tr.tagline}</p>
+        <p class="font-bold">{tr.taglineBold}</p>
+      </div>
+    </div>
+
+    <div class="relative mx-auto mt-10 max-w-4xl sm:mt-16">
+      <img src="/images/project-ohd-2.jpg" alt="Website showcase" class="h-auto w-full rounded-lg" />
+
+      <div class="mt-4 max-w-full rounded-lg bg-zinc-900/95 px-5 py-4 sm:max-w-xs md:absolute md:bottom-8 md:left-8 md:mt-0 md:max-w-[200px]">
+        <p>
+          <span class="text-brand font-bold italic">{di.headlineGreen}</span>
+          <br />
+          <span class="text-white">{di.headlineWhite}</span>
+        </p>
+      </div>
+
+      <div class="mt-4 max-w-full rounded-lg bg-white px-5 py-5 shadow-xl sm:max-w-xs md:absolute md:top-1/2 md:right-0 md:mt-0 md:-translate-y-1/2 md:translate-x-8 md:px-6">
+        <p class="mb-3 font-bold italic text-zinc-900">{di.specializedTitle}</p>
+        <ul class="space-y-2">
+          {di.items.map((item) => (
+            <li class="flex items-center gap-2 text-zinc-800 text-sm">
+              <span class="contents" set:html={checkIcon('w-4 h-4 text-zinc-600 shrink-0')}></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="text-zinc-600 text-sm mt-2 pl-6">{di.more}</p>
+      </div>
+    </div>
+  </Container>
+</section>

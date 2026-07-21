@@ -1,0 +1,40 @@
+---
+import Container from '@/components/Container.astro'
+import { whatsappUrl } from '@/data/constants'
+import { t } from '@/data/translations'
+import { circleCheckIcon, whatsappIcon } from '@/components/icons'
+
+type Props = { lang: 'es' | 'en' }
+const { lang } = Astro.props as Props
+const tr = t[lang].services
+const half = Math.ceil(tr.items.length / 2)
+const columns = [tr.items.slice(0, half), tr.items.slice(half)]
+---
+
+<section id="services" class="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+  <Container class="grid min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto] lg:gap-12">
+    <div class="min-w-0 max-w-2xl space-y-6">
+      <h2 class="text-2xl font-bold italic sm:text-3xl md:text-4xl">{tr.headline}</h2>
+      <p class="leading-relaxed text-white">{tr.subtext}</p>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {columns.flat().map((item) => (
+          <div class="flex items-center gap-2 text-white">
+            <span class="contents" set:html={circleCheckIcon('text-brand w-5 h-5 shrink-0')}></span>
+            {item}
+          </div>
+        ))}
+      </div>
+      <p class="text-white">
+        {tr.extraPrefix}{' '}
+        <span class="font-bold text-white">{tr.extraBold}</span>
+      </p>
+      <a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" class="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-hover sm:w-auto">
+        <span class="contents" set:html={whatsappIcon('w-5 h-5')}></span>
+        {tr.cta}
+      </a>
+    </div>
+    <div class="flex min-w-0 justify-center">
+      <img src="/images/services.jpg" alt="Services" class="h-auto min-w-0 w-full max-w-xs rounded-lg sm:max-w-sm" />
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,91 @@
+---
+import Container from '@/components/Container.astro'
+import { t } from '@/data/translations'
+
+type Props = { lang: 'es' | 'en' }
+const { lang } = Astro.props as Props
+const tr = t[lang].limitedSpots
+const inputClass = 'w-full rounded border border-zinc-300/80 bg-zinc-950/60 px-4 py-3 text-base text-white transition-colors focus:border-brand focus:outline-none'
+---
+
+<section class="contact-overlap-section relative px-4 pt-14 pb-0 sm:px-6 sm:pt-20 md:px-8 lg:px-12 bg-zinc-950">
+  <Container>
+    <div class="relative z-20 mx-auto -mb-16 max-w-4xl space-y-7 rounded-lg bg-[#0b0f1d] p-5 shadow-2xl shadow-black/35 sm:p-7 md:-mb-28 md:p-12 lg:p-16">
+      <div class="text-center space-y-4">
+        <h2 class="text-3xl font-bold uppercase leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">{tr.headline}</h2>
+        <p class="max-w-2xl mx-auto text-white text-base leading-relaxed">{tr.subtext}</p>
+      </div>
+
+      <form data-contact-form data-success={tr.success} data-error={tr.error} class="max-w-2xl mx-auto space-y-5">
+        <div>
+          <label for={`name-${lang}`} class="block text-base font-medium mb-2">{tr.namePlaceholder}</label>
+          <input id={`name-${lang}`} name="name" type="text" required class={inputClass} />
+        </div>
+        <div>
+          <label for={`phone-${lang}`} class="block text-base font-medium mb-2">{tr.phonePlaceholder}</label>
+          <input id={`phone-${lang}`} name="phone" type="text" required class={inputClass} />
+        </div>
+        <div>
+          <label for={`email-${lang}`} class="block text-base font-medium mb-2">{tr.emailPlaceholder}</label>
+          <input id={`email-${lang}`} name="email" type="email" required class={inputClass} />
+        </div>
+        <p data-contact-status class="hidden text-sm"></p>
+        <button type="submit" class="w-full rounded bg-brand px-8 py-3 font-semibold text-white transition-colors hover:bg-brand-hover disabled:opacity-60 sm:w-auto">{tr.submit}</button>
+      </form>
+    </div>
+  </Container>
+</section>
+
+<script>
+  for (const form of document.querySelectorAll<HTMLFormElement>('[data-contact-form]')) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault()
+
+      const status = form.querySelector<HTMLElement>('[data-contact-status]')
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')
+      const formData = new FormData(form)
+
+      if (status) {
+        status.className = 'text-sm text-white'
+        status.textContent = '...'
+      }
+      if (button) {
+        button.disabled = true
+      }
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: String(formData.get('name') ?? ''),
+            phone: String(formData.get('phone') ?? ''),
+            email: String(formData.get('email') ?? ''),
+          }),
+        })
+
+        if (!status) {
+          return
+        }
+
+        if (response.ok) {
+          form.reset()
+          status.className = 'text-sm text-brand font-semibold'
+          status.textContent = form.dataset.success ?? ''
+        } else {
+          status.className = 'text-sm text-red-400'
+          status.textContent = form.dataset.error ?? ''
+        }
+      } catch {
+        if (status) {
+          status.className = 'text-sm text-red-400'
+          status.textContent = form.dataset.error ?? ''
+        }
+      } finally {
+        if (button) {
+          button.disabled = false
+        }
+      }
+    })
+  }
+</script>

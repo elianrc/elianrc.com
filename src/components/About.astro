@@ -1,0 +1,41 @@
+---
+import Container from '@/components/Container.astro'
+import { SOCIAL_LINKS, whatsappUrl } from '@/data/constants'
+import { t } from '@/data/translations'
+import { githubIcon, linkedinIcon, whatsappIcon } from '@/components/icons'
+
+type Props = { lang: 'es' | 'en' }
+const { lang } = Astro.props as Props
+const tr = t[lang].about
+---
+
+<section id="about" class="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+  <Container class="grid min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-12">
+    <div class="min-w-0 space-y-5 sm:space-y-6">
+      <h2 class="text-2xl font-bold italic sm:text-3xl md:text-5xl">{tr.headline}</h2>
+      <p class="text-white leading-relaxed">
+        {tr.bodyPrefix}{' '}
+        <a href="https://www.elnuevodia.com/tecnologia/otros/notas/joven-boricua-se-abre-paso-en-silicon-valley/" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline">{tr.bodyLink}</a>
+        {tr.bodySuffix}{' '}
+        <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" class="text-brand hover:underline">{tr.linkedinLabel}</a>.
+      </p>
+      <p class="text-white leading-relaxed">{tr.bodyExtra}</p>
+      <p class="text-white leading-relaxed">{tr.bodyPersonal}</p>
+      <p class="font-bold italic underline">{tr.connect}</p>
+      <div class="flex gap-3">
+        <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-lg bg-blue-700 flex items-center justify-center hover:bg-blue-600 transition-colors">
+          <span class="contents" set:html={linkedinIcon('w-5 h-5 text-white')}></span>
+        </a>
+        <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-lg bg-zinc-700 flex items-center justify-center hover:bg-zinc-600 transition-colors">
+          <span class="contents" set:html={githubIcon('w-5 h-5 text-white')}></span>
+        </a>
+        <a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-lg bg-brand flex items-center justify-center hover:bg-brand-hover transition-colors">
+          <span class="contents" set:html={whatsappIcon('w-5 h-5 text-white')}></span>
+        </a>
+      </div>
+    </div>
+    <div class="flex min-w-0 justify-center">
+      <img src="/images/profile.png" alt="Elián RC" class="h-56 w-56 rounded-full border-4 border-white object-cover sm:h-72 sm:w-72 sm:border-8 md:h-80 md:w-80" />
+    </div>
+  </Container>
+</section>

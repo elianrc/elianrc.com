@@ -1,0 +1,28 @@
+---
+import Container from '@/components/Container.astro'
+import { t } from '@/data/translations'
+import { banknoteIcon, paintbrushIcon, whatsappIcon } from '@/components/icons'
+
+type Props = { lang: 'es' | 'en' }
+const { lang } = Astro.props as Props
+const features = t[lang].features
+const icons = [
+  banknoteIcon('text-brand w-12 h-12'),
+  paintbrushIcon('text-brand w-12 h-12'),
+  whatsappIcon('text-brand w-12 h-12'),
+]
+---
+
+<section class="px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 lg:py-24 bg-zinc-950">
+  <Container class="grid grid-cols-1 gap-10 md:grid-cols-3 lg:gap-12">
+    {features.map((feature, index) => (
+      <div class="mx-auto max-w-sm space-y-4 text-center">
+        <div class="flex justify-center">
+          <span class="contents" set:html={icons[index]}></span>
+        </div>
+        <h3 class="text-xl font-bold italic">{feature.title}</h3>
+        <p class="text-white leading-relaxed">{feature.body}</p>
+      </div>
+    ))}
+  </Container>
+</section>

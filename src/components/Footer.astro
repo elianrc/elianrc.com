@@ -1,0 +1,55 @@
+---
+import Container from '@/components/Container.astro'
+import { SOCIAL_LINKS, whatsappUrl } from '@/data/constants'
+import { t } from '@/data/translations'
+import { githubIcon, linkedinIcon, whatsappIcon } from '@/components/icons'
+
+type Props = { lang: 'es' | 'en' }
+const { lang } = Astro.props as Props
+const tr = t[lang].footer
+---
+
+<footer class="site-footer relative bg-white px-4 pt-28 pb-10 text-zinc-800 sm:px-6 md:px-8 md:pt-44 lg:px-12 lg:pb-12">
+  <Container class="grid grid-cols-1 items-start justify-items-center gap-8 text-center sm:grid-cols-2 sm:justify-items-start sm:text-left lg:grid-cols-[auto_1fr_auto_auto]">
+    <div class="flex-shrink-0">
+      <img src="/images/footer.png" alt="Elián RC" class="w-28 h-auto object-contain" />
+    </div>
+
+    <div class="space-y-2">
+      <h4 class="font-bold text-sm">Sobre Mi</h4>
+      <p class="text-zinc-600 text-sm leading-relaxed max-w-xs">{tr.aboutText}</p>
+    </div>
+
+    <div class="space-y-2">
+      <h4 class="font-bold text-sm">{tr.quickLinks}</h4>
+      <ul class="space-y-1">
+        <li><a href={lang === 'es' ? '/' : '/en/'} class="text-zinc-600 hover:text-brand text-sm transition-colors">Inicio</a></li>
+        <li><a href="#services" class="text-zinc-600 hover:text-brand text-sm transition-colors">{t[lang].nav.services}</a></li>
+        <li><a href="#portfolio" class="text-zinc-600 hover:text-brand text-sm transition-colors">Portfolio</a></li>
+        <li><a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-brand text-sm transition-colors">Whatsapp</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-2">
+      <h4 class="font-bold text-sm">{tr.connect}</h4>
+      <div class="flex gap-3">
+        <a href={whatsappUrl(lang)} target="_blank" rel="noopener noreferrer" class="text-zinc-800 hover:text-brand transition-colors">
+          <span class="contents" set:html={whatsappIcon('w-5 h-5')}></span>
+        </a>
+        <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" class="text-zinc-800 hover:text-brand transition-colors">
+          <span class="contents" set:html={linkedinIcon('w-5 h-5')}></span>
+        </a>
+        <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" class="text-zinc-800 hover:text-brand transition-colors">
+          <span class="contents" set:html={githubIcon('w-5 h-5')}></span>
+        </a>
+      </div>
+    </div>
+  </Container>
+
+  <Container class="mt-8 border-t border-zinc-200 pt-6 text-center">
+    <p class="text-zinc-500 text-sm">
+      {tr.copyright.replace('.', '')} -{' '}
+      <a href="#" class="underline hover:text-zinc-800 transition-colors">{tr.terms}</a>
+    </p>
+  </Container>
+</footer>
