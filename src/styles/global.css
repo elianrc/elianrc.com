@@ -1,0 +1,195 @@
+@import "tailwindcss";
+@import "@fontsource-variable/montserrat";
+
+@theme {
+  --font-sans: "Montserrat Variable", Montserrat, Arial, sans-serif;
+  --color-brand: #51c634;
+  --color-brand-hover: #3faa25;
+}
+
+:where(body, button, input, textarea, select) {
+  font-family: "Montserrat Variable", Montserrat, Arial, sans-serif;
+}
+
+.site-bubble-background {
+  position: relative;
+  min-height: 100svh;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% -20%, rgba(27, 80, 162, 0.2), transparent 34rem),
+    #090b13;
+}
+
+.site-bubble-background > :not(.bubble-background) {
+  position: relative;
+  z-index: 1;
+}
+
+.site-bubble-background > nav,
+.site-bubble-background > section {
+  background-color: transparent;
+}
+
+.site-bubble-background > .contact-overlap-section {
+  z-index: 3;
+}
+
+.site-bubble-background > .site-footer {
+  z-index: 1;
+}
+
+.bubble-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(7, 10, 24, 0.98), rgba(7, 17, 42, 0.96) 48%, rgba(4, 8, 18, 0.98)),
+    #090b13;
+}
+
+.bubble-background-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.bubble-background-gradients {
+  position: absolute;
+  inset: -22vh -18vw;
+  filter: url("#bubble-goo") blur(24px);
+  mix-blend-mode: screen;
+}
+
+.bubble {
+  --bubble-size: 42vmax;
+  --bubble-color: 18, 64, 145;
+  position: absolute;
+  width: var(--bubble-size);
+  height: var(--bubble-size);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(var(--bubble-color), 0.72) 0, rgba(var(--bubble-color), 0.28) 34%, transparent 68%);
+  opacity: 0.72;
+  will-change: transform;
+}
+
+.bubble-one {
+  top: 12%;
+  left: 8%;
+  animation: bubble-orbit-one 18s ease-in-out infinite;
+}
+
+.bubble-two {
+  top: 0;
+  right: 2%;
+  --bubble-size: 36vmax;
+  opacity: 0.58;
+  animation: bubble-orbit-two 22s ease-in-out infinite;
+}
+
+.bubble-three {
+  bottom: 2%;
+  left: 24%;
+  --bubble-size: 44vmax;
+  opacity: 0.52;
+  animation: bubble-orbit-three 24s ease-in-out infinite;
+}
+
+.bubble-four {
+  right: 18%;
+  bottom: 12%;
+  --bubble-size: 34vmax;
+  opacity: 0.62;
+  animation: bubble-orbit-four 20s ease-in-out infinite;
+}
+
+.bubble-five {
+  top: 38%;
+  left: 44%;
+  --bubble-size: 28vmax;
+  opacity: 0.34;
+  animation: bubble-orbit-five 23s ease-in-out infinite;
+}
+
+.bubble-six {
+  top: 56%;
+  right: 38%;
+  --bubble-size: 30vmax;
+  opacity: 0.5;
+  animation: bubble-orbit-six 26s ease-in-out infinite;
+}
+
+.bubble-interactive {
+  top: 0;
+  left: 0;
+  --bubble-size: 30vmax;
+  opacity: 0.18;
+}
+
+@keyframes bubble-orbit-one {
+  0%, 100% {
+    transform: translate3d(-8%, -4%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(18%, 12%, 0) scale(1.18);
+  }
+}
+
+@keyframes bubble-orbit-two {
+  0%, 100% {
+    transform: translate3d(10%, -8%, 0) scale(1.08);
+  }
+
+  50% {
+    transform: translate3d(-22%, 20%, 0) scale(0.92);
+  }
+}
+
+@keyframes bubble-orbit-three {
+  0%, 100% {
+    transform: translate3d(-18%, 14%, 0) scale(0.94);
+  }
+
+  50% {
+    transform: translate3d(12%, -20%, 0) scale(1.1);
+  }
+}
+
+@keyframes bubble-orbit-four {
+  0%, 100% {
+    transform: translate3d(16%, 10%, 0) scale(0.98);
+  }
+
+  50% {
+    transform: translate3d(-12%, -16%, 0) scale(1.2);
+  }
+}
+
+@keyframes bubble-orbit-five {
+  0%, 100% {
+    transform: translate3d(-8%, 16%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(20%, -12%, 0) scale(1.16);
+  }
+}
+
+@keyframes bubble-orbit-six {
+  0%, 100% {
+    transform: translate3d(14%, -8%, 0) scale(1.04);
+  }
+
+  50% {
+    transform: translate3d(-18%, 18%, 0) scale(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble {
+    animation: none;
+  }
+}

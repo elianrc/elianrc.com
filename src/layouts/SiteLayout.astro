@@ -1,0 +1,36 @@
+---
+import '../styles/global.css'
+
+type Props = {
+  lang: 'es' | 'en'
+  title?: string
+  description?: string
+}
+
+const {
+  lang,
+  title = 'Elián RC - Web Designer & Developer',
+  description = 'Diseño websites modernos, rápidos y funcionales que generan confianza y resultados. / I design modern, fast, and functional websites that build trust and deliver results.',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Websites que impulsan ventas." />
+    <meta property="og:url" content="https://elianrc.com" />
+    <meta property="og:site_name" content="Elián RC" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_CR' : 'en_US'} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+  </head>
+  <body class="bg-zinc-950 text-white antialiased">
+    <slot />
+  </body>
+</html>

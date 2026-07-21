@@ -1,0 +1,35 @@
+<div class="bubble-background" aria-hidden="true">
+  <svg class="bubble-background-filter" aria-hidden="true" focusable="false">
+    <filter id="bubble-goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"></feGaussianBlur>
+      <feColorMatrix
+        in="blur"
+        mode="matrix"
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
+        result="goo"></feColorMatrix>
+      <feBlend in="SourceGraphic" in2="goo"></feBlend>
+    </filter>
+  </svg>
+
+  <div class="bubble-background-gradients">
+    <span class="bubble bubble-one" style="--bubble-color:18, 64, 145"></span>
+    <span class="bubble bubble-two" style="--bubble-color:22, 91, 188"></span>
+    <span class="bubble bubble-three" style="--bubble-color:9, 33, 92"></span>
+    <span class="bubble bubble-four" style="--bubble-color:35, 104, 197"></span>
+    <span class="bubble bubble-five" style="--bubble-color:16, 70, 158"></span>
+    <span class="bubble bubble-six" style="--bubble-color:12, 45, 112"></span>
+    <span class="bubble bubble-interactive" style="--bubble-color:42, 111, 203"></span>
+  </div>
+</div>
+
+<script>
+  const bubble = document.querySelector<HTMLElement>('.bubble-interactive')
+
+  window.addEventListener('pointermove', (event) => {
+    if (!bubble) {
+      return
+    }
+
+    bubble.style.transform = `translate3d(calc(${event.clientX}px - 50%), calc(${event.clientY}px - 50%), 0)`
+  })
+</script>
