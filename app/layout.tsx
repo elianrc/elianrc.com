@@ -8,6 +8,7 @@ const montserrat = localFont({
   display: 'swap',
   style: 'normal',
   weight: '100 900',
+  variable: '--font-montserrat',
 })
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={montserrat.variable}>
       <body className={`${montserrat.className} antialiased bg-zinc-950 text-white`}>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
