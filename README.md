@@ -8,7 +8,7 @@ Astro static site configured for Cloudflare Pages hosting.
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:4321](http://localhost:4321).
 
 ## Cloudflare Pages
 
