@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   description:
     'Diseño websites modernos, rápidos y funcionales que generan confianza y resultados. / I design modern, fast, and functional websites that build trust and deliver results.',
   metadataBase: new URL('https://elianrc.com'),
+  icons: {
+    icon: '/images/favicon.png',
+    apple: '/images/favicon.png',
+  },
   openGraph: {
     title: 'Elián RC — Web Designer & Developer',
     description: 'Websites que impulsan ventas.',

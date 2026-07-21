@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it, vi } from 'vitest'
-import RootLayout from '@/app/layout'
+import RootLayout, { metadata } from '@/app/layout'
 import localFont from 'next/font/local'
 
 vi.mock('next/font/local', () => ({
@@ -25,5 +25,14 @@ describe('RootLayout typography', () => {
     )
     expect(markup).toContain('montserrat-class')
     expect(markup).toContain('montserrat-variable')
+  })
+})
+
+describe('RootLayout metadata', () => {
+  it('uses the site favicon image', () => {
+    expect(metadata.icons).toEqual({
+      icon: '/images/favicon.png',
+      apple: '/images/favicon.png',
+    })
   })
 })
